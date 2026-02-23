@@ -13,12 +13,14 @@ title: Set-CsTeamsWorkLocationDetectionPolicy
 # Set-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy.
+This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the work location detection experience in Microsoft Teams. When the EnableWorkLocationDetection parameter is enabled, Teams determines a user’s work location based on their interaction with organization‑managed networks and devices, such as desks or peripherals configured by IT administrators. To learn how to configure desks to certain work location, please see [Configure buildings and floors - Microsoft Places | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors).
+
+Microsoft processes this information in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) to provide a consistent location‑based experience and support hybrid work scenarios in Microsoft 365.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-Identity] <String> [-Force]
+Set-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-UserSettingsDefault <String>] [-Identity] <String> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,6 +36,14 @@ PS> Set-CsTeamsWorkLocationDetectionPolicy -Identity ExistingPolicyInstance -Ena
 ```
 
 Updates the `EnableWorkLocationDetection` field of a given policy.
+
+### Example 2
+
+```powershell
+PS> Set-CsTeamsWorkLocationDetectionPolicy -Identity ExistingPolicyInstance -UserSettingsDefault Enabled
+```
+
+Updates the `UserSettingsDefault` field of a given policy to `Enabled`.
 
 ## PARAMETERS
 
@@ -64,6 +74,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSettingsDefault
+Specifies the default user settings behavior for work location detection. Possible values are:
+
+- `Enabled`: Enables the default user settings for work location detection.
+- `Disabled`: Disables the default user settings for work location detection.
+
+The default value is `Disabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
