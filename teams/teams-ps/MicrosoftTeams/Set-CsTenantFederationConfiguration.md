@@ -237,6 +237,12 @@ Set-CsTenantFederationConfiguration -SecurityTeamAllowBlockListDelegation "Enabl
 ```
 Example 17 shows how you let your security operations team edit the blocked domains and blocked users lists from Defender for Office 365 (default value is Disabled).
 
+### Example 18
+```
+Set-CsTenantFederationConfiguration -ApplyExternalAccessRestrictionsToChatMembership "Enabled" -ExtendMutualFederationForChatMembership "Enabled"
+```
+Example 18 shows how you let you further limit users ability to participat in group chats using the `ApplyExternalAccessRestrictionsToChatMembership` and `ExtendMutualFederationForChatMembership` parameters (default value for both is Disabled).
+
 ## PARAMETERS
 
 ### -AllowedDomains
