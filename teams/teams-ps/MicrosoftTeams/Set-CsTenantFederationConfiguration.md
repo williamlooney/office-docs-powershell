@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 author: tomkau
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: test
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.date: 12/11/2024
