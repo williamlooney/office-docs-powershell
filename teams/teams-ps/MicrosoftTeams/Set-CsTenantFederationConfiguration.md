@@ -476,7 +476,7 @@ When set to True, users in the tenant who have `EnableFederationAccess` set to F
 
 The `ApplyExternalAccessRestrictionsToChatMembership` parameter does not affect the behavior set by `CommunicationWithExternalOrgs` parameter of the `ExternalAccessPolicy`.
 > [!NOTE]
-> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy]/powershell/module/microsoftteams/set-csexternalaccesspolicy) for information about `EnableFederationAccess` parameter.
+> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](/powershell/module/microsoftteams/set-csexternalaccesspolicy) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
 
